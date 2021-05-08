@@ -5,12 +5,12 @@
 
 // data structure that represents a node in the tree
 class Node {
-	int data; // holds the key
+	String data; // holds the key
 	Node parent; // pointer to the parent
 	Node left; // pointer to left child
 	Node right; // pointer to right child
 
-	public Node(int data) {
+	public Node(String data) {
 		this.data = data;
 		this.parent = null;
 		this.left = null;
@@ -44,18 +44,18 @@ public class SplayTree {
 		}
 	}
 
-	private Node searchTreeHelper(Node node, int key) {
+	private Node searchTreeHelper(Node node, String key) {
 		if (node == null || key == node.data) {
 			return node;
 		}
 
-		if (key < node.data) {
+		if (key.length() < node.data.length()) {
 			return searchTreeHelper(node.left, key);
 		} 
 		return searchTreeHelper(node.right, key);
 	}
 
-	private void deleteNodeHelper(Node node, int key) {
+	private void deleteNodeHelper(Node node, String key) {
 		Node x = null;
 		Node t = null; 
 		Node s = null;
@@ -64,7 +64,7 @@ public class SplayTree {
 				x = node;
 			}
 
-			if (node.data <= key) {
+			if (node.data.length() <= key.length()) {
 				node = node.right;
 			} else {
 				node = node.left;
@@ -225,7 +225,7 @@ public class SplayTree {
 
 	// search the tree for the key k
 	// and return the corresponding node
-	public Node searchTree(int k) {
+	public Node searchTree(String k) {
 		Node x = searchTreeHelper(root, k);
 		if (x != null) {
 			splay(x);
@@ -287,14 +287,14 @@ public class SplayTree {
 	}
 
 	// insert the key to the tree in its appropriate position
-	public void insert(int key) {
+	public void insert(String key) {
 		Node node = new Node(key);
 		Node y = null;
 		Node x = this.root;
 
 		while (x != null) {
 			y = x;
-			if (node.data < x.data) {
+			if (node.data.length() < x.data.length()) {
 				x = x.left;
 			} else {
 				x = x.right;
@@ -305,7 +305,7 @@ public class SplayTree {
 		node.parent = y;
 		if (y == null) {
 			root = node;
-		} else if (node.data < y.data) {
+		} else if (node.data.length() < y.data.length()) {
 			y.left = node;
 		} else {
 			y.right = node;
@@ -316,7 +316,7 @@ public class SplayTree {
 	}
 
 	// delete the node from the tree
-	void deleteNode(int data) {
+	void deleteNode(String data) {
 		deleteNodeHelper(this.root, data);
 	}
 
