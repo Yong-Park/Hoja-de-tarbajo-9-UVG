@@ -1,0 +1,20 @@
+abandonee	dejado
+abandonee	desamparado
+abandonee	money
+abandoner	abandonador
+abandoning	abandonando
+abandoning	abandono
+abandonment	abandono
+abandonment	desamparo, deserci�n
+abandonments	abandonos
+abandons	abandona
+abandons	desampara
+abase	abatir
+abase	abatir, envilecer
+abase	denigrar[Verb]
+abase	rebajar, humillar, degradar
+abase	rebajar, degradar, humillar, abatir[Verb]
+abased	degradado
+abased	rebajado, humillado, degradado
+abased	rebajado, degradado, humillado, abatido[Adjective]
+abasement	envilecimiento
