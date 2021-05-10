@@ -7425,8 +7425,8 @@ yonder	ahi/ alla/
 yore	antan~o
 you	tu/
 you	usted
-you	vosotros(plural/informal)
-you	vosotros(plural/informal)[Pronoun]
+you	vosotros (plural/informal)
+you	vosotros (plural/informal)[Pronoun]
 young	joven
 younger	menor
 youngster	jovencito
