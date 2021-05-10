@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 // Splay tree implementation in Java
 // Author: AlgorithmTutor
 // Tutorial URL: http://algorithmtutor.com/Data-Structures/Tree/Splay-Trees/
@@ -51,7 +49,7 @@ public class SplayTree {
 			return node;
 		}
 
-		if (key.length() < node.data.length()) {
+		if (key.length() <= node.data.length()) {
 			return searchTreeHelper(node.left, key);
 		} 
 		return searchTreeHelper(node.right, key);
@@ -62,7 +60,7 @@ public class SplayTree {
 		Node t = null; 
 		Node s = null;
 		while (node != null){
-			if (node.data == key) {
+			if (node.data.length() == key.length()) {
 				x = node;
 			}
 
@@ -327,7 +325,7 @@ public class SplayTree {
 		printHelper(this.root, "", true);
 	}
 
-	public boolean TreeContains(String data){
+	public boolean contains(String data){
 		Node x = searchTreeHelper(root, data);
 		if(x!=null){
 			return true;
