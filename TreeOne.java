@@ -74,7 +74,7 @@ public class TreeOne {
 					if(change.contains(",")){
 						String[] strsplit = change.split(",");
 						linea.set(i,strsplit[0]);
-					}else if(change.contains(" ")){
+					}else if(change.contains("[")){
                         String[] strsplit = change.split(" ");
 						linea.set(i,strsplit[0]);
                     }else{

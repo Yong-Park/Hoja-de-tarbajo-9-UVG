@@ -3597,7 +3597,7 @@ hazel	avellanado[Adjective]
 hazelnut	avellano[Noun]
 hazelnuts	avellanos[Noun]
 hazy	brumoso[Adjective]
-he	e/l[Pronoun]
+he	el [Pronoun]
 head	cabeza
 head	la cabeza
 head	doument
@@ -5596,14 +5596,14 @@ receive	recibir
 recent	reciente
 recipe	la receta
 recognize	reconocer
-recognize	recognize[Noun]
+recognize	recognize [Noun]
 recommend	recomendar
-recommendation	recomendacio/n[Noun]
+recommendation	recomendacio/n [Noun]
 recommendation	recomendado
-recommended	recomendado[Adjective]
-reconcile	reconciliar[Verb]
+recommended	recomendado [Adjective]
+reconcile	reconciliar [Verb]
 reconciliation	reconciliacio/n
-recycle	reciclar[Verb]
+recycle	reciclar [Verb]
 red	rojo
 refrigerator	la nevera
 refuse	rehusar
@@ -5617,21 +5617,21 @@ repair	reparar
 repeat	repetir
 reply	contestar
 request	pedir
-resentment	resentimiento[Noun]
+resentment	resentimiento [Noun]
 respect	respetar
 rest	descansar
 restaurant	el restaurante
 result	la resulta
-return	regresar[Verb]
+return	regresar [Verb]
 return	volver
 review	el repaso
 rib	la costilla
 rice	arroz
 rice	el arroz
 rich	rico
-ride	montar[Verb]
+ride	montar [Verb]
 right	derecha
-right	verdad[Adjective]
+right	verdad [Adjective]
 rim	llanta
 rime	rima
 riming	rimando
