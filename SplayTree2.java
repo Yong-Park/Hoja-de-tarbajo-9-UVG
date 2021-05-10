@@ -1,3 +1,4 @@
+//codigo obtenido de https://algs4.cs.princeton.edu/33balanced/SplayBST.java.html
 public class SplayTree2<Key extends Comparable<Key>, Value>  {
 
     private Node root;   // root of the BST

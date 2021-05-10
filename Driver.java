@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Driver{
     public static void main (String[] args){
-        SplayTree2<String,String> tree = new SplayTree2();
+        SplayTree2<String,String> tree = new SplayTree2<>();
 		//lectura del archivo txt
         Scanner scanner = new Scanner(System.in);
 			//lectura del diccionario
@@ -26,7 +26,6 @@ public class Driver{
 						
 					}*/
 					words.add(data);
-					System.out.println(data);
                     tree.put(data.get(0),data.get(1));     
                 }
                 lectura.close();
@@ -35,52 +34,61 @@ public class Driver{
                 e.printStackTrace();
             }
 
-			//dejar un espacio para que haya como salto
-			System.out.println("\n");
+			//lectura del archivo palabras.txt que son las oracioens en ingles
+			ArrayList<ArrayList<String>> traducir = new ArrayList<>();
+            try{
+                File datos = new File("palabras.txt");
+                Scanner lectura = new Scanner(datos);
+
+                while(lectura.hasNextLine()){
+                    String expresion = lectura.nextLine();
+                    String[] strsplit = expresion.split(" ");
+					ArrayList<String> data = new ArrayList<>();
+					for(int i=0; i<strsplit.length;i++){
+						data.add(strsplit[i]);
+					}
+					traducir.add(data);  
+                }
+                lectura.close();
+            }catch(FileNotFoundException e){
+                System.out.println("No se encontro el archivo");
+                e.printStackTrace();
+            }
 			
 			//realizar busqueda de palabras en el diccionario para ver si estan o no. 
-			ArrayList<String> palabras = new ArrayList<>();
-			palabras.add("the");
-			palabras.add("woman");
-			palabras.add("asked");
-			palabras.add("me");
-			palabras.add("to");
-			palabras.add("do");
-			palabras.add("my");
-			palabras.add("homework");
-			palabras.add("in");
-			palabras.add("the");
-			palabras.add("town");
-			
-			         
-			//se esta buscando esto tambien es prueba
-			for(int i=0;i<palabras.size();i++){
-				if(tree.contains(palabras.get(i))){
-					System.out.println("si la contiene");
-					System.out.println(palabras.get(i));
-					System.out.println(tree.get(palabras.get(i)));
-				}else{
-					System.out.println("no la contiene");
-					System.out.println(palabras.get(i));
+			for(ArrayList<String> linea : traducir){
+				//antes de traducir
+				System.out.println("_________________________________________");
+				System.out.println("Original");
+				String oracion = "";
+				for(int i=0;i<linea.size();i++){
+					oracion += linea.get(i) + " " ;
 				}
-				System.out.println("___________________");
-			}
+				System.out.println(oracion);
+				System.out.println("_________________________________________");
 
-			//probando
-			/*if(tree.contains("abased")){
-				for(int i=0;i<words.size();i++){
-					if(words.get(i).contains("abased")){
-						System.out.println(words.get(i).get(1));
+				//traducir
+				for(int i=0;i<linea.size();i++){
+					if(tree.contains(linea.get(i))){
+						String change = tree.get(linea.get(i));
+						if(change.contains(",")){
+							String[] strsplit = change.split(",");
+							linea.set(i,strsplit[0]);
+						}else{
+							linea.set(i,change);
+						}
 					}
 				}
+				//juntar las palabras para hacerlo en una oracion
+				System.out.println("_________________________________________");
+				System.out.println("Traducido");
+				oracion = "";
+				for(int i=0;i<linea.size();i++){
+					oracion += linea.get(i) + " " ;
+				}
+				System.out.println(oracion);
+				System.out.println("_________________________________________");
 			}
-			System.out.println(words);*/
-			
-			
-			
-
-			
-			
     }
 
 }
