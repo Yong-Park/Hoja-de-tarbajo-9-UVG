@@ -5,7 +5,7 @@
  * @author Christopher Garcia - 20541
  * HT9 - Diccionario Ingles-Espanol
  */
-/*
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.ArrayList;
 import org.junit.Test;
@@ -19,7 +19,7 @@ public class Junit {
      */
 
     //prueba para revisar si efectivamente se agregaron y estan las palabras en el diccionario en el splay tree
-    /*@Test
+    @Test
     public void testAgregarSplaytree(){
         SplayTree2<String,String> tree = new SplayTree2<>();
         tree.put("Hello", "Hola");
@@ -27,7 +27,7 @@ public class Junit {
         boolean contiene = tree.contains("Bye");
         assertEquals(true, contiene);
         contiene = tree.contains("Hello");
-        assertEquals(false, contiene);
+        assertEquals(true, contiene);
     }
 
     //prueba para revisar que se elimino uno de los nodos que se agregaron en el splay tree
@@ -61,7 +61,7 @@ public class Junit {
 
     //Prueba unitaria#1: Comprobación de que los elementos se agregan correctamente
     //en este tipo de algoritmo basado en Hashing
-    /*@Test
+    @Test
     public void test1Add(){
         HashmapC<String,String> HashTree = new HashmapC<String,String>();
         HashTree.put("Dog", "Perro");
@@ -108,4 +108,3 @@ public class Junit {
     }
 
 }
-*/
