@@ -1,12 +1,5 @@
-/*
- * Universidad del Valle de Guatemala
- * Estructura de Datos - Seccion 10
- * @author Yong Park - 20117
- * @author Christopher Garcia - 20541
- * HT9 - Diccionario Ingles-Espanol
- * Codigo obtenido de https://algs4.cs.princeton.edu/33balanced/SplayBST.java.html
- */
-public class SplayTree2<Key extends Comparable<Key>, Value>{
+//codigo obtenido de https://algs4.cs.princeton.edu/33balanced/SplayBST.java.html
+public class SplayTree2<Key extends Comparable<Key>, Value> implements map<Key, Value>{
 
     private Node root;   // root of the BST
 
