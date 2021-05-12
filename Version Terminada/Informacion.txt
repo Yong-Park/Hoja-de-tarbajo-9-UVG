@@ -1,0 +1,1 @@
+Se arreglaron algunos errores. Se comentó todo el código.
