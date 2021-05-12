@@ -15,11 +15,11 @@ import java.util.Scanner;
  *Clase TreeOne
  *Encargada del desarrollo del SplayTree, asociaciones del diccionario y traducciones con este Arbol
  */
-public class TreeOne {
+public class TreeOne implements Interface{
 	/**
 	 * Método runSplayTree: Encargado de iniciar el proceso de ejecucion
 	 */
-    public void runSplayTree(){
+    public void runTree(){
 		//Creación de arbol
         SplayTree2<String,String> tree = new SplayTree2<>();
 		//lectura del archivo txt

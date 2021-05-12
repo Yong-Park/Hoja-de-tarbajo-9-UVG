@@ -20,18 +20,17 @@ public class Driver{
         //mostrar menu
 		do{
 			int op=vista.menu();
-			//correr el splaytree
-			if(op==1){
-				TreeOne splaytree = new TreeOne();
-				splaytree.runSplayTree();
-			//correr el mapeo
-			}else if(op==2){
-				TreeTwo Hashingtree = new TreeTwo();
-				Hashingtree.runHashingMap();
-			//terminar
-			}else if(op==3){
+			//revisar si es 3 de lo contrario seguir
+			if(op==3){
 				ciclo=false;
+			}else{
+				//correr el splaytree
+				Factory factory = new Factory();
+				Interface Tree= factory.getFactory(op);
+				Tree.runTree();
 			}
+			
+			
 		}while(ciclo);
     }
 }

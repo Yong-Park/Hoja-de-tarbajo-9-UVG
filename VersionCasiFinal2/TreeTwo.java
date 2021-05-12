@@ -12,11 +12,11 @@ import java.util.*;
  *Clase TreeTwo
  *Encargada del desarrollo del mapeo basado en Hashing, asociaciones del diccionario y traducciones con este mapa
  */
-public class TreeTwo {
+public class TreeTwo implements Interface{
     /**
 	 * Método runHashingTree: Encargado de iniciar el proceso de ejecucion
 	 */
-    public void runHashingMap(){
+    public void runTree(){
 
 		//Creacion de mapa
     	HashmapC<String,String> HashTree= new HashmapC<String,String>();

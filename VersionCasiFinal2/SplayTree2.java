@@ -6,7 +6,7 @@
  * HT9 - Diccionario Ingles-Espanol
  * Codigo obtenido de https://algs4.cs.princeton.edu/33balanced/SplayBST.java.html
  */
-public class SplayTree2<Key extends Comparable<Key>, Value>{
+public class SplayTree2<Key extends Comparable<Key>, Value> implements map<Key,Value>{
 
     private Node root;   // root of the BST
 
