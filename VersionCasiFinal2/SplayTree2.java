@@ -22,10 +22,20 @@ public class SplayTree2<Key extends Comparable<Key>, Value> implements map<Key,V
         }
     }
 
+    
+    /** 
+     * @param key
+     * @return boolean
+     */
     public boolean contains(Key key) {
         return get(key) != null;
     }
 
+    
+    /** 
+     * @param key
+     * @return Value
+     */
     // return value associated with the given key
     // if no such value, return null
     public Value get(Key key) {
@@ -168,20 +178,39 @@ public class SplayTree2<Key extends Comparable<Key>, Value> implements map<Key,V
 
     // height of tree (1-node tree has height 0)
     public int height() { return height(root); }
+    
+    /** 
+     * @param x
+     * @return int
+     */
     private int height(Node x) {
         if (x == null) return -1;
         return 1 + Math.max(height(x.left), height(x.right));
     }
 
+    
+    /** 
+     * @return int
+     */
     public int size() {
         return size(root);
     }
     
+    
+    /** 
+     * @param x
+     * @return int
+     */
     private int size(Node x) {
         if (x == null) return 0;
         else return 1 + size(x.left) + size(x.right);
     }
     
+    
+    /** 
+     * @param h
+     * @return Node
+     */
     // right rotate
     private Node rotateRight(Node h) {
         Node x = h.left;
@@ -190,6 +219,11 @@ public class SplayTree2<Key extends Comparable<Key>, Value> implements map<Key,V
         return x;
     }
 
+    
+    /** 
+     * @param h
+     * @return Node
+     */
     // left rotate
     private Node rotateLeft(Node h) {
         Node x = h.right;

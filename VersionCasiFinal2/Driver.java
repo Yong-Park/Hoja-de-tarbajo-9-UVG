@@ -11,6 +11,10 @@
  * Utilizada para respetar el MVC y con esta se inicia el programa
  */
 public class Driver{
+	
+	/** 
+	 * @param args
+	 */
 	/*Método main que controla el desarrollo del programa*/
     public static void main (String[] args){
 		//direcciones

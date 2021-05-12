@@ -9,6 +9,10 @@
 import java.util.Scanner;
 //Clase Vista para respetar el MVC
 public class Vista {
+    
+    /** 
+     * @return int
+     */
     //Menu del programa
     public int menu(){
         Scanner scanner = new Scanner(System.in);

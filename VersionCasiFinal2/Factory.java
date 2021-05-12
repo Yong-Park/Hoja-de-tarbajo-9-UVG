@@ -8,6 +8,11 @@
  * Referencia de trabajos anteriores
  */
 public class Factory {
+    
+    /** 
+     * @param op
+     * @return Interface
+     */
     public Interface getFactory(int op){
         if(op==1){
             //regresar el TreeOne
